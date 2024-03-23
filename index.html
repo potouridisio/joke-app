@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <form id="categoryForm">
+      <label class="categoryLabel">
+        <input type="checkbox" name="category" value="Programming" />
+        Programming </label
+      ><br />
+      <label class="categoryLabel">
+        <input type="checkbox" name="category" value="Misc" /> Misc </label
+      ><br />
+      <label class="categoryLabel">
+        <input type="checkbox" name="category" value="Dark" /> Dark </label
+      ><br />
+      <label class="categoryLabel">
+        <input type="checkbox" name="category" value="Pun" /> Pun </label
+      ><br />
+      <label class="categoryLabel">
+        <input type="checkbox" name="category" value="Spooky" /> Spooky </label
+      ><br />
+      <label class="categoryLabel">
+        <input type="checkbox" name="category" value="Christmas" />
+        Christmas </label
+      ><br />
+      <button type="submit" class="generateButton">Generate Joke</button>
+    </form>
+    <h1 id="joke"></h1>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
