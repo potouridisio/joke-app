@@ -1,6 +1,6 @@
 import { type Category, type SingleJoke, type TwoPartJoke } from './types'
 
-const baseURL = 'https://v2.jokeapi.dev'
+const baseURL = 'https://v2.jokeapi.dev';
 
 export async function fetchJoke(
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
@@ -9,6 +9,6 @@ export async function fetchJoke(
   const response = await fetch(
     // https://developer.mozilla.org/en-US/docs/Glossary/Truthy
     `${baseURL}/joke/${categories.length ? categories.join(',') : 'Any'}`
-  )
-  return await response.json()
+  );
+  return await response.json();
 }
