@@ -5,18 +5,18 @@ import { type Category, type SingleJoke, type TwoPartJoke } from './types'
 import { fetchJoke } from './utils'
 
 // https://www.typescripttutorial.net/typescript-tutorial/type-casting/
-const jokeElement = document.getElementById('joke') as HTMLElement
-const categoryForm = document.getElementById('categoryForm') as HTMLElement
+const jokeElement = document.getElementById('joke') as HTMLElement;
+const categoryForm = document.getElementById('categoryForm') as HTMLElement;
 
 categoryForm.addEventListener('submit', async (event) => {
-  event.preventDefault() // Prevent default form submission behavior
+  event.preventDefault(); // Prevent default form submission behavior
 
   // Retrieve selected categories
-  const selectedCategories: Category[] = []
+  const selectedCategories: Category[] = [];
 
-  const joke = await fetchJoke(selectedCategories)
+  const joke = await fetchJoke(selectedCategories);
 
-  displayJoke(joke)
+  displayJoke(joke);
 })
 
 // Function to display joke
