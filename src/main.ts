@@ -51,4 +51,16 @@ function displayJoke(joke: SingleJoke | TwoPartJoke) {
       jokeElement.appendChild(setupParagraph);
       jokeElement.append(deliveryParagraph);
   }
+ if (joke.flags) {
+  jokeElement.style.filter = "blur(10px)";
+  const blurButton = document.createElement('button');
+  blurButton.classList.add('button');
+  blurButton.classList.add('blurButton');
+  blurButton.textContent = 'Show joke';
+  jokeElement.insertAdjacentElement('afterend', blurButton);
+  blurButton.addEventListener('click', () => {
+    jokeElement.style.filter = "";
+  });
+ }
+
 }

@@ -13,8 +13,8 @@ body {
   margin-right: 5px;
 }
 
-.generateButton {
-  background-color: #4caf50;
+
+.button {
   border: none;
   color: white;
   padding: 12px 20px;
@@ -25,11 +25,22 @@ body {
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s;
-  margin-top: 10px;
+  margin-top: 10px;  
 }
 
+.generateButton {
+  background-color: #4caf50;
+}
 .generateButton:hover {
   background-color: #45a049;
+}
+
+.blurButton {
+  background-color: #504caf;
+}
+
+.blurButton:hover {
+  background-color: #503aaa;
 }
 
 #joke {
