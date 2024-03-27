@@ -38,4 +38,17 @@ categoryForm.addEventListener('submit', async (event) => {
 // Function to display joke
 function displayJoke(joke: SingleJoke | TwoPartJoke) {
   // TODO: Implement a feature to blur flagged jokes and provide a button to unblur them.
+  jokeElement.innerHTML = '';
+  switch (joke.type) {
+    case 'single':
+      jokeElement.textContent = joke.joke;
+      break;
+    case 'twopart':
+      const setupParagraph = document.createElement('p');
+      setupParagraph.textContent = joke.setup;
+      const deliveryParagraph = document.createElement('p');
+      deliveryParagraph.textContent = joke.delivery;
+      jokeElement.appendChild(setupParagraph);
+      jokeElement.append(deliveryParagraph);
+  }
 }
