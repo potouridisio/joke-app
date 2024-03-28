@@ -7,6 +7,16 @@ export type Category =
   | 'Spooky'
   | 'Christmas'
 
+export interface Error {
+  error: boolean;
+  inferralError: boolean;
+  code: number;
+  message: string;
+  causedBy: string[];
+  additionalInfo: string;
+  timestamp: number;
+}
+
 interface Flags {
   nsfw: boolean;
   religious: boolean;
